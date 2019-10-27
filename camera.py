@@ -410,11 +410,11 @@ class VideoCamera(object):
         # ret,jpeg = cv2.imencode('.jpg',image)
         # jpeg=text_mode(image)
         # return jpeg.tobytes()
-        image_res=calculator_mode(image)
-        cv2.imshow(image_res)
+        # image_res=calculator_mode(image)
+        # cv2.imshow(image_res)
         #f=open('out.jpeg')
-        d=imread('out.jpeg')
-        ret, jpeg = cv2.imencode('.jpeg', d)
+        #d=imread('out.jpeg')
+        ret, jpeg = cv2.imencode('.jpeg', image)
         return jpeg.tobytes()
 
 
