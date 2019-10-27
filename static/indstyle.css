@@ -1,0 +1,41 @@
+.brand-logo {
+    padding-left: 50px !important;
+}
+
+.card {
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+    margin-top: 40px !important;
+    padding-left: 40px !important;
+    padding-bottom: 50px !important;
+    padding-top: 50px !important;
+    padding-right: 50px !important;
+}
+
+.title {
+    margin-left: 40px !important;
+    color: white;
+}
+
+.input-field {
+    margin-left: 40px !important;
+    color: white !important;
+}
+
+.btn-large {
+    margin-left: 40px !important;
+    margin-bottom: 40px !important;
+    color: rgb(62, 96, 209) !important;
+}
+
+.card-action {
+    margin-top: 30px !important;
+    margin-left: 30px !important;
+    color: white !important;
+    font-size: 20px !important;
+}
+
+
+/* body {
+    background-color: black;
+} */
