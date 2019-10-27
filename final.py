@@ -12,6 +12,20 @@ engine = pyttsx3.init()
 engine.setProperty('rate', 150)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 model = load_model('cnn_model_keras2.h5')
+f=open('data.txt','w+')
+
+
+subscription_key = '2d7670a72130498abe28498ffee48a26'
+
+from playsound import playsound
+
+#playsound('myfile.wav')
+
+def textToS(data):
+	app=tts.TextToSpeech(subscription_key,data)
+	app.get_token()
+	app.save_audio()
+	playsound('result.wav')
 
 def get_hand_hist():
 	with open("hist", "rb") as f:
@@ -88,7 +102,7 @@ hist = get_hand_hist()
 x, y, w, h = 300, 100, 300, 300
 is_voice_on = True
 
-data=""
+#data=""
 
 def get_img_contour_thresh(img):
 	img = cv2.flip(img, 1)
@@ -217,13 +231,13 @@ def calculator_mode(cam):
 		cv2.putText(blackboard, calc_text, (30, 240), cv2.FONT_HERSHEY_TRIPLEX, 2, (255, 255, 255))
 		cv2.putText(blackboard, info, (30, 440), cv2.FONT_HERSHEY_TRIPLEX, 1, (0, 255, 255) )
 		if is_voice_on:
-			cv2.putText(blackboard, "Voice on", (450, 440), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+			cv2.putText(blackboard, "Text to speech enabled", (450, 440), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
 		else:
-			cv2.putText(blackboard, "Voice off", (450, 440), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
+			cv2.putText(blackboard, "TTS disabled", (450, 440), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
 		cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), 2)
 		res = np.hstack((img, blackboard))
 		cv2.imshow("Recognizing gesture", res)
-		data=res
+		f.write(calc_text)
 		cv2.imshow("thresh", thresh)
 		keypress = cv2.waitKey(1)
 		if keypress == ord('q') or keypress == ord('t'):
@@ -284,7 +298,12 @@ def text_mode(cam):
 		blackboard = np.zeros((480, 640, 3), dtype=np.uint8)
 		cv2.putText(blackboard, "Text Mode", (180, 50), cv2.FONT_HERSHEY_TRIPLEX, 1.5, (255, 0,0))
 		cv2.putText(blackboard, "Predicted text- " + text, (30, 100), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 255, 0))
+		#
+		# textToS(text)
+		#data=data+text
+		
 		cv2.putText(blackboard, word, (30, 240), cv2.FONT_HERSHEY_TRIPLEX, 2, (255, 255, 255))
+		f.write(word)
 		if is_voice_on:
 			cv2.putText(blackboard, "Voice on", (450, 440), cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
 		else:
@@ -323,9 +342,17 @@ def recognize():
 			break
 
 keras_predict(model, np.zeros((50, 50), dtype = np.uint8))	
-
-conn = sqlite3.connect("gesture_db.db")
-cmd = "SELECT * FROM gesture"
-l = conn.execute(cmd)
-print(l.fetchall())
 recognize()
+
+# f=open('data.txt','w+')
+# f.write(data)
+f.close()
+
+
+
+
+
+
+
+
+

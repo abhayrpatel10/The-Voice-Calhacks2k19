@@ -1,0 +1,10 @@
+gestures
+cnn_tf.py
+gesture_db.db
+requirements.txt
+test_images
+test_labels
+train_labels
+train_images
+val_images
+val_labels

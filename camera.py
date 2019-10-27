@@ -9,6 +9,7 @@ import sqlite3
 import pyttsx3
 from keras.models import load_model
 from threading import Thread
+from PIL import Image
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 150)
@@ -141,7 +142,7 @@ def calculator_mode(cam):
     Thread(target=say_text, args=(info,)).start()
     count_clear_frames = 0
     while True:
-        img = cam.read()[1]
+        img = cam
         img = cv2.resize(img, (640, 480))
         img, contours, thresh = get_img_contour_thresh(img)
         old_pred_text = pred_text
@@ -250,7 +251,12 @@ def calculator_mode(cam):
         cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
         res = np.hstack((img, blackboard))
         cv2.imshow("Recognizing gesture", res)
-    return res
+        print(type(res))
+        result=Image.fromarray(res,'RGB')
+        result.save('out.jpeg')
+        result.show()
+        cv2.imshow("data",result)
+    return result
     # data = res
     #  #print(data)
     # cv2.imshow("thresh", thresh)
@@ -326,10 +332,12 @@ def text_mode(cam):
                         cv2.FONT_HERSHEY_TRIPLEX, 1, (255, 127, 0))
         cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
         res = np.hstack((img, blackboard))
-        print(res)
+        print(type(res))
+        
         cv2.imshow("Recognizing gesture", res)
         cv2.imshow("thresh", thresh)
-    return img
+        
+    return res
     # cv2.imshow("Recognizing gesture", res)
     #  cv2.imshow("thresh", thresh)
     #   keypress = cv2.waitKey(1)
@@ -376,7 +384,7 @@ class VideoCamera(object):
 
     def get_frame(self):
         #image = self.video.read()[1]
-        success, image = self.video.read()
+        success,image = self.video.read()
         # count_same_frame=0
         # keypress=1
         # while True:
@@ -402,7 +410,11 @@ class VideoCamera(object):
         # ret,jpeg = cv2.imencode('.jpg',image)
         # jpeg=text_mode(image)
         # return jpeg.tobytes()
-        ret, jpeg = cv2.imencode('.jpg', image)
+        image_res=calculator_mode(image)
+        cv2.imshow(image_res)
+        #f=open('out.jpeg')
+        d=imread('out.jpeg')
+        ret, jpeg = cv2.imencode('.jpeg', d)
         return jpeg.tobytes()
 
 
