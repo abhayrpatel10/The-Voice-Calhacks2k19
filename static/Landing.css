@@ -1,0 +1,259 @@
+.mediaViewInfo {
+	--web-view-name: Landing;
+	--web-view-id: Landing;
+	--web-refresh-for-changes: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Landing;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Landing {
+	position: absolute;
+	box-sizing: border-box;
+	background: #E5E5E5;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(19,19,19,1);
+	overflow: hidden;
+	--web-view-name: Landing;
+	--web-view-id: Landing;
+	--web-refresh-for-changes: true;
+	--web-enable-deep-linking: true;
+}
+.Path_4 {
+	overflow: visible;
+	position: absolute;
+	width: 1920px;
+	height: 50px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_1 {
+	overflow: visible;
+	position: absolute;
+	width: 1099.563px;
+	height: 1030.505px;
+	left: 820.437px;
+	top: 49.948px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Express_yourself {
+	position: absolute;
+	left: 140px;
+	top: 264px;
+	overflow: visible;
+	width: 694px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: SF Pro Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100px;
+	color: rgba(255,255,255,0.902);
+	letter-spacing: 0.07px;
+}
+#Group_2 {
+	position: absolute;
+	width: 270px;
+	height: 76.136px;
+	left: 140px;
+	top: 697px;
+	overflow: visible;
+}
+#Start {
+	position: absolute;
+	left: 79.079px;
+	top: 10.662px;
+	overflow: visible;
+	width: 103px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: SF Pro Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 43px;
+	color: rgba(255,255,255,0.902);
+	letter-spacing: 0.99px;
+}
+#startbutton{
+	align-content: center;
+	font-family: SF Pro Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 43px;
+	background-color: black;
+	color: white;
+
+}
+.Rectangle_3 {
+	position: absolute;
+	overflow: visible;
+	width: 273px;
+	height: 79.136px;
+	left: 0px;
+	top: 0px;
+}
+.Path_2 {
+	overflow: visible;
+	position: absolute;
+	width: 573.088px;
+	height: 117.122px;
+	left: 140.875px;
+	top: 475.156px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Component_2___1 {
+	position: absolute;
+	width: 367px;
+	height: 29px;
+	left: 1106px;
+	top: 11px;
+	overflow: visible;
+}
+#Home {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+	width: 63px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: SF Pro Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(255,255,255,0.902);
+	letter-spacing: 0.07px;
+}
+#Voice {
+	position: absolute;
+	left: 138px;
+	top: 0px;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: SF Pro Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(255,255,255,0.902);
+	letter-spacing: 0.07px;
+}
+#About_us {
+	position: absolute;
+	left: 276px;
+	top: 0px;
+	overflow: visible;
+	width: 91px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: SF Pro Display;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	color: rgba(255,255,255,0.902);
+	letter-spacing: 0.07px;
+}
+#Group_1 {
+	position: absolute;
+	width: 550.299px;
+	height: 335.019px;
+	left: 1224px;
+	top: 279.102px;
+	overflow: visible;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 550.299px;
+	height: 335.019px;
+	left: 0px;
+	top: 0px;
+}
+.Image_1 {
+	position: absolute;
+	overflow: visible;
+	width: 515.5px;
+	height: 311.787px;
+	left: 17.529px;
+	top: 11.616px;
+}
+#Component_1___1 {
+	position: absolute;
+	width: 30.325px;
+	height: 33.801px;
+	left: 139px;
+	top: 9.014px;
+	overflow: visible;
+}
+.Line_10 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 33.801px;
+	left: 8.081px;
+	top: 1px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_9 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 15.519px;
+	left: 1px;
+	top: 10.141px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_7 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 33.801px;
+	left: 22.244px;
+	top: 1px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_8 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 24.016px;
+	left: 15.162px;
+	top: 5.892px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Line_6 {
+	overflow: visible;
+	position: absolute;
+	width: 2px;
+	height: 15.519px;
+	left: 29.325px;
+	top: 10.141px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_3 {
+	overflow: visible;
+	position: absolute;
+	width: 58.609px;
+	height: 15.694px;
+	left: 181.922px;
+	top: 17.771px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Path_5 {
+	overflow: visible;
+	position: absolute;
+	width: 2562.552px;
+	height: 654.49px;
+	left: -484.641px;
+	top: 690.248px;
+	transform: matrix(1,0,0,1,0,0);
+}

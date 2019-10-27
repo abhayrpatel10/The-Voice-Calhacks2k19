@@ -1,0 +1,18 @@
+<html>
+    <body>
+
+            
+            <div id="ds-clickwrap"></div>
+            <script src="https://demo.docusign.net/clickapi/sdk/latest/docusign-click.js"></script>
+            <script>
+            var data=new Date().toString();
+            docuSignClick.Clickwrap.render({
+                environment: 'https://demo.docusign.net',
+                accountId: '275a9b2a-2849-4405-9498-e871c2243f4d',
+                clickwrapId: 'ecda7e03-a7a4-44eb-905d-0a418f9dc26e',
+                clientUserId: data
+              }, '#ds-clickwrap');</script>
+
+    </body>
+</html>
+
