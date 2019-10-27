@@ -70,13 +70,13 @@ class TextToSpeech(object):
         else:
             print("\nStatus code: " + str(response.status_code) + "\nSomething went wrong. Check your subscription key and headers.\n")
 
+#global res
+# def getData(d):
+#     res=d
 
-def getData(d):
-    res=d
-
-if __name__ == "__main__":
-    #d=getData()
-    app = TextToSpeech(subscription_key,res)
-    app.get_token()
-    app.save_audio()
+# if __name__ == "__main__":
+#     #d=getData()
+#     #app = TextToSpeech(subscription_key,res)
+#     # app.get_token()
+#     # app.save_audio()
     
