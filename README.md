@@ -1,4 +1,4 @@
-# VOICE
+# THE VOICE
 Voice is an app that helps people with disablity to speak with recognizing thier gestures giving out text and speech
 
   - Some of the challenges faced by people with disability to speak:
