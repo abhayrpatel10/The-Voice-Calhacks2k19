@@ -36,7 +36,7 @@ Keras-Preprocessing==1.1.0
 lazy-object-proxy==1.4.1
 libarchive-c==2.8
 
-lxml==4.3.4
+lxml==4.6.2
 
 matplotlib==3.0.3
 
